@@ -359,7 +359,7 @@
             <div class="step">
                 <div class="step-number">1</div>
                 <div style="flex: 1;">
-                    <h2 style="margin-top: 0; margin-bottom: 8px;">Установите Prism Launcher</h2>
+                    <h2 style="margin-top: 0; margin-bottom: 8px;">Установите Prism Launcher и дополнительные моды (обязательный шаг)</h2>
                     <p style="opacity: 0.85; margin-bottom: 16px;">
                         Кроссплатформенный лаунчер с Modrinth, CurseForge и автоматической установкой модов.
                     </p>
@@ -367,7 +367,7 @@
                        class="download-btn">
                         ⬇️ Скачать Prism Launcher (Windows)
                     </a>
-                    <a href="files/mods.7z" download class="download-btn">
+                    <a href="mods.7z" download class="download-btn">
     📦 Скачать дополнительные моды (7z, 15 МБ)
                     </a>
                     <p style="font-size: 0.85em; opacity: 0.6; margin-top: 12px;">
