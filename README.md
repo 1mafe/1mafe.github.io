@@ -366,7 +366,7 @@
         // Авто-обновление статуса сервера
         async function updateServerStatus() {
             try {
-                const response = await fetch('https://api.mcsrvstat.us/2/vostok357.ddns.net:24');
+                const response = await fetch('https://api.mcsrvstat.us/3/vostok357.ddns.net:24');
                 const data = await response.json();
                 
                 const statusEl = document.getElementById('status-online');
