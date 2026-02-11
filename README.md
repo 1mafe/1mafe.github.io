@@ -455,7 +455,7 @@
                 <!-- ТОЛЬКО ВИДЕО, НИЧЕГО ЛИШНЕГО -->
                 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; background: #000;">
                     <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-                            src="https://www.youtube.com/embed/jHe7UVZEtIk?si=vVWMvM2hufLJfXCl" 
+                            src="https://www.youtube.com/embed/v7q6L-nEF-8?si=qffhgTPvNgK_g9Bx" 
                             frameborder="0" 
                             allowfullscreen>
                     </iframe>
