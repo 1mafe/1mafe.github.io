@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vostok357 | Minecraft Server</title>
+    <title>Vostok357 | Minecraft Server </title>
     <style>
         :root {
             --primary: #2563eb;
