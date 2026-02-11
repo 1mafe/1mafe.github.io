@@ -367,6 +367,9 @@
                        class="download-btn">
                         ⬇️ Скачать Prism Launcher (Windows)
                     </a>
+                    <a href="files/mods.7z" download class="download-btn">
+    📦 Скачать дополнительные моды (7z, 15 МБ)
+                    </a>
                     <p style="font-size: 0.85em; opacity: 0.6; margin-top: 12px;">
                         Версия 10.0.2 (cracked) · Modrinth
                     </p>
