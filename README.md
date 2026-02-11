@@ -139,18 +139,6 @@
             background: rgba(255,255,255,0.2);
             border-color: rgba(255,255,255,0.3);
         }
-        .status {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(0,0,0,0.3);
-            padding: 10px 18px;
-            border-radius: 40px;
-            font-size: 0.95em;
-            margin-top: 10px;
-        }
-        .online { color: #4ade80; }
-        .offline { color: #f87171; }
         .instruction-block {
             background: rgba(0,0,0,0.2);
             border-radius: 18px;
@@ -253,7 +241,7 @@
                             <li>В поиске введите: <code style="background: #0f172a; padding: 3px 8px; border-radius: 6px;">Homestead</code></li>
                             <li>Выберите версию <strong>1.2.9.4</strong> <span class="modrinth-badge">Modrinth</span></li>
                             <li>Нажмите «OK» — сборка скачается и установится автоматически</li>
-                            <li>Версия Minecraft: <strong>1.20.1</strong>, Forge</li>
+                            <li>Версия Minecraft: <strong>1.20.1</strong>, Fabric</li>
                         </ol>
                     </div>
                     
@@ -281,14 +269,6 @@
                     </p>
                     
                     <div class="server-card">
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-                            <span style="background: var(--success); width: 12px; height: 12px; border-radius: 50%; display: inline-block;"></span>
-                            <span class="status" id="status-text">
-                                🟢 Статус: <span id="status-online">загрузка...</span> · 
-                                Игроков: <span id="player-count">?</span>/20
-                            </span>
-                        </div>
-                        
                         <div class="copy-box">
                             <div>
                                 <div style="font-size: 0.8em; opacity: 0.6; margin-bottom: 4px;">АДРЕС СЕРВЕРА</div>
@@ -320,7 +300,7 @@
                 <div>
                     <h4 style="margin-bottom: 15px; color: #fca5a5;">❌ Не подключается к серверу</h4>
                     <ul style="margin: 0; padding-left: 20px; color: #cbd5e1;">
-                        <li>Проверьте версию — нужна <strong>1.20.1</strong> (Forge)</li>
+                        <li>Проверьте версию — нужна <strong>1.20.1</strong> (Fabric)</li>
                         <li>Убедитесь, что Homestead версии 1.2.9.4</li>
                         <li>Отключите брандмауэр/антивирус на 5 минут</li>
                         <li>Попробуйте перезапустить Prism</li>
@@ -348,7 +328,7 @@
     </div>
 
     <script>
-        // Копирование адреса в буфер
+        // Простое копирование адреса в буфер
         function copyAddress() {
             navigator.clipboard.writeText('vostok357.ddns.net:24');
             
@@ -362,33 +342,6 @@
                 btn.style.background = 'rgba(255,255,255,0.1)';
             }, 2000);
         }
-
-        // Авто-обновление статуса сервера
-        async function updateServerStatus() {
-            try {
-                const response = await fetch('https://api.mcsrvstat.us/3/vostok357.ddns.net:24');
-                const data = await response.json();
-                
-                const statusEl = document.getElementById('status-online');
-                const playersEl = document.getElementById('player-count');
-                
-                if (data.online) {
-                    statusEl.innerHTML = '🟢 ONLINE';
-                    statusEl.style.color = '#4ade80';
-                    playersEl.innerHTML = data.players.online || '0';
-                } else {
-                    statusEl.innerHTML = '🔴 OFFLINE';
-                    statusEl.style.color = '#f87171';
-                    playersEl.innerHTML = '0';
-                }
-            } catch (e) {
-                document.getElementById('status-online').innerHTML = '⚪ Нет данных';
-                document.getElementById('player-count').innerHTML = '?';
-            }
-        }
-
-        updateServerStatus();
-        setInterval(updateServerStatus, 45000);
     </script>
 </body>
 </html>
