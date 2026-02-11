@@ -211,9 +211,10 @@
     <div class="container">
         <div class="header">
             <div class="logo">VOSTOK357</div>
-            <div class="sub">Minecraft — сервер Vanilla+ на базе мод-пака Homestead</div>
+            <div class="sub">Minecraft — ванильный сервер с Homestead</div>
         </div>
 
+        <!-- ШАГ 1: Prism Launcher -->
         <div class="card">
             <div class="step">
                 <div class="step-number">1</div>
@@ -233,6 +234,7 @@
             </div>
         </div>
 
+        <!-- ШАГ 2: Установка Homestead -->
         <div class="card">
             <div class="step">
                 <div class="step-number">2</div>
@@ -245,13 +247,13 @@
                     <div class="instruction-block">
                         <h4>📦 Пошаговая инструкция</h4>
                         <ol style="margin-bottom: 0;">
-                            <li><strong>Запустите Prism Launcher</strong> и войдите в аккаунт (создайте пиратский)</li>
+                            <li><strong>Запустите Prism Launcher</strong> и войдите в аккаунт</li>
                             <li>Нажмите кнопку <code style="background: #0f172a; padding: 3px 8px; border-radius: 6px;">«Добавить экземпляр»</code> (Add Instance)</li>
                             <li>Выберите вкладку <strong>Modrinth</strong></li>
                             <li>В поиске введите: <code style="background: #0f172a; padding: 3px 8px; border-radius: 6px;">Homestead</code></li>
                             <li>Выберите версию <strong>1.2.9.4</strong> <span class="modrinth-badge">Modrinth</span></li>
                             <li>Нажмите «OK» — сборка скачается и установится автоматически</li>
-                            <li>Версия Minecraft: <strong>1.20.1</strong>, Fabric</li>
+                            <li>Версия Minecraft: <strong>1.20.1</strong>, Forge</li>
                         </ol>
                     </div>
                     
@@ -260,13 +262,15 @@
                             🔍 Что такое Homestead?
                         </summary>
                         <p style="margin-top: 15px; margin-bottom: 0; color: #cbd5e1;">
-                            🌿 Homestead — это уютный модпак для Minecraft Vanilla+, созданный для исследователей, строителей и выживших. Предпочитаете ли вы мирное строительство или смелые приключения, Homestead предлагает тщательно проработанный игровой процесс с пользовательскими квестами, постройками, мобами и предметами — всё это создано для того, чтобы вы играли гораздо дольше обычных двух недель.
+                            Homestead — это ванильная сборка, которая улучшает выживание, не ломая оригинальный дух Minecraft. 
+                            Добавляет улучшенные деревни, структуры, мобов и рецепты, сохраняя ванильный баланс.
                         </p>
                     </details>
                 </div>
             </div>
         </div>
 
+        <!-- ШАГ 3: Подключение к серверу -->
         <div class="card">
             <div class="step">
                 <div class="step-number">3</div>
@@ -276,6 +280,14 @@
                         Сервер работает круглосуточно. Просто скопируйте адрес и добавьте его в мультиплеер.
                     </p>
                     
+                    <div class="server-card">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                            <span style="background: var(--success); width: 12px; height: 12px; border-radius: 50%; display: inline-block;"></span>
+                            <span class="status" id="status-text">
+                                🟢 Статус: <span id="status-online">загрузка...</span> · 
+                                Игроков: <span id="player-count">?</span>/20
+                            </span>
+                        </div>
                         
                         <div class="copy-box">
                             <div>
@@ -298,6 +310,7 @@
             </div>
         </div>
 
+        <!-- Частые вопросы / решение проблем -->
         <div class="card" style="background: rgba(23, 25, 35, 0.6);">
             <h3 style="margin-top: 0; margin-bottom: 25px; display: flex; align-items: center; gap: 10px;">
                 <span style="font-size: 1.5em;">⚠️</span> Если что-то пошло не так
@@ -307,7 +320,7 @@
                 <div>
                     <h4 style="margin-bottom: 15px; color: #fca5a5;">❌ Не подключается к серверу</h4>
                     <ul style="margin: 0; padding-left: 20px; color: #cbd5e1;">
-                        <li>Проверьте версию — нужна <strong>1.20.1</strong> (Fabric)</li>
+                        <li>Проверьте версию — нужна <strong>1.20.1</strong> (Forge)</li>
                         <li>Убедитесь, что Homestead версии 1.2.9.4</li>
                         <li>Отключите брандмауэр/антивирус на 5 минут</li>
                         <li>Попробуйте перезапустить Prism</li>
@@ -332,5 +345,50 @@
         <div class="footer">
             Vostok357 Network · Сервер работает на 1.20.1 · Homestead 1.2.9.4
         </div>
+    </div>
+
+    <script>
+        // Копирование адреса в буфер
+        function copyAddress() {
+            navigator.clipboard.writeText('vostok357.ddns.net:24');
+            
+            const btn = event.currentTarget;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '✅ Скопировано!';
+            btn.style.background = 'rgba(16, 185, 129, 0.3)';
+            
+            setTimeout(() => {
+                btn.innerHTML = '📋 Копировать';
+                btn.style.background = 'rgba(255,255,255,0.1)';
+            }, 2000);
+        }
+
+        // Авто-обновление статуса сервера
+        async function updateServerStatus() {
+            try {
+                const response = await fetch('https://api.mcsrvstat.us/2/vostok357.ddns.net:24');
+                const data = await response.json();
+                
+                const statusEl = document.getElementById('status-online');
+                const playersEl = document.getElementById('player-count');
+                
+                if (data.online) {
+                    statusEl.innerHTML = '🟢 ONLINE';
+                    statusEl.style.color = '#4ade80';
+                    playersEl.innerHTML = data.players.online || '0';
+                } else {
+                    statusEl.innerHTML = '🔴 OFFLINE';
+                    statusEl.style.color = '#f87171';
+                    playersEl.innerHTML = '0';
+                }
+            } catch (e) {
+                document.getElementById('status-online').innerHTML = '⚪ Нет данных';
+                document.getElementById('player-count').innerHTML = '?';
+            }
+        }
+
+        updateServerStatus();
+        setInterval(updateServerStatus, 45000);
+    </script>
 </body>
 </html>
