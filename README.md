@@ -352,7 +352,7 @@
         <div class="header">
             <div class="logo">VOSTOK357</div>
             <div class="sub">Vanilla+ сервер Minecraft на базе Homestead</div>
-        </div>
+    </div>
 
         <!-- ШАГ 1: Prism Launcher -->
         <div class="card">
@@ -442,6 +442,25 @@
                 </div>
             </div>
         </div>
+
+            <!-- ПОДРОБНЫЙ ВИДЕО-ГАЙД ДЛЯ РЖАНЫХ ХЛЕБЦЕВ -->
+            <div class="card" style="padding: 25px;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                    <span style="font-size: 2em;">🎬</span>
+                    <h2 style="margin: 0; font-size: 1.6em; font-weight: 600;">
+                        Подробный видео-гайд для ржаных хлебцев
+                    </h2>
+                </div>
+            
+                <!-- ТОЛЬКО ВИДЕО, НИЧЕГО ЛИШНЕГО -->
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; background: #000;">
+                    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                            src="https://www.youtube.com/embed/ID_ВИДЕО" 
+                            frameborder="0" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
 
         <!-- Частые вопросы / решение проблем -->
         <div class="card" style="background: rgba(23, 25, 35, 0.7);">
