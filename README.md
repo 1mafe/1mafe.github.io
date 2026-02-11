@@ -390,6 +390,10 @@
                             <li>В поиске введите: <code>Homestead</code></li>
                             <li>Выберите версию <strong>1.2.9.4</strong> <span class="modrinth-badge">Modrinth</span></li>
                             <li>Нажмите «OK» — сборка скачается автоматически</li>
+                            <li style="margin-top: 12px;"><strong>Выберите пункт «Изменить...»</strong> в меню сборки (правой кнопкой мыши)</li>
+                            <li>В левом меню выберите <strong>«Параметры»</strong></li>
+                            <li>Сверху переключитесь на вкладку <strong>«Java»</strong></li>
+                            <li><strong>Включите галочку «Память»</strong> и установите <strong>5120 MiB</strong> для обоих полей (минимум и максимум)</li>
                         </ol>
                     </div>
 
