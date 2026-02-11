@@ -199,7 +199,7 @@
     <div class="container">
         <div class="header">
             <div class="logo">VOSTOK357</div>
-            <div class="sub">Minecraft — ванильный сервер с Homestead</div>
+            <div class="sub">Vanilla+ сервер Minecraft на базе мод-пака Homestead</div>
         </div>
 
         <!-- ШАГ 1: Prism Launcher -->
@@ -228,14 +228,11 @@
                 <div class="step-number">2</div>
                 <div style="flex: 1;">
                     <h2 style="margin-top: 0; margin-bottom: 8px;">Установите сборку Homestead</h2>
-                    <p style="opacity: 0.8;">
-                        Чистый ванильный+ опыт с улучшенным выживанием.
-                    </p>
                     
                     <div class="instruction-block">
                         <h4>📦 Пошаговая инструкция</h4>
                         <ol style="margin-bottom: 0;">
-                            <li><strong>Запустите Prism Launcher</strong> и войдите в аккаунт/создайте крякнутый</li>
+                            <li><strong>Запустите Prism Launcher</strong> и войдите в аккаунт, либо создайте автономный (пиратский)</li>
                             <li>Нажмите кнопку <code style="background: #0f172a; padding: 3px 8px; border-radius: 6px;">«Добавить экземпляр»</code> (Add Instance)</li>
                             <li>Выберите вкладку <strong>Modrinth</strong></li>
                             <li>В поиске введите: <code style="background: #0f172a; padding: 3px 8px; border-radius: 6px;">Homestead</code></li>
