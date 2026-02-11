@@ -211,7 +211,7 @@
     <div class="container">
         <div class="header">
             <div class="logo">VOSTOK357</div>
-            <div class="sub">Minecraft — ванильный сервер с Homestead</div>
+            <div class="sub">Minecraft — сервер Vanilla+ на базе мод-пака Homestead</div>
         </div>
 
         <!-- ШАГ 1: Prism Launcher -->
@@ -336,50 +336,8 @@
         <div class="footer">
             Vostok357 Network · Сервер работает на 1.20.1 · Homestead 1.2.9.4
         </div>
-    </div>
 
-    <script>
-        // Копирование адреса в буфер
-        function copyAddress() {
-            navigator.clipboard.writeText('vostok357.ddns.net:24');
-            
-            const btn = event.currentTarget;
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '✅ Скопировано!';
-            btn.style.background = 'rgba(16, 185, 129, 0.3)';
-            
-            setTimeout(() => {
-                btn.innerHTML = '📋 Копировать';
-                btn.style.background = 'rgba(255,255,255,0.1)';
-            }, 2000);
-        }
+    
 
-        // Авто-обновление статуса сервера
-        async function updateServerStatus() {
-            try {
-                const response = await fetch('https://api.mcsrvstat.us/2/vostok357.ddns.net:24');
-                const data = await response.json();
-                
-                const statusEl = document.getElementById('status-online');
-                const playersEl = document.getElementById('player-count');
-                
-                if (data.online) {
-                    statusEl.innerHTML = '🟢 ONLINE';
-                    statusEl.style.color = '#4ade80';
-                    playersEl.innerHTML = data.players.online || '0';
-                } else {
-                    statusEl.innerHTML = '🔴 OFFLINE';
-                    statusEl.style.color = '#f87171';
-                    playersEl.innerHTML = '0';
-                }
-            } catch (e) {
-                document.getElementById('status-online').innerHTML = '⚪ Нет данных';
-                document.getElementById('player-count').innerHTML = '?';
-            }
-        }
-
-        updateServerStatus();
-        setInterval(updateServerStatus, 45000);
-    </script>
 </body>
 </html>
