@@ -214,7 +214,6 @@
             <div class="sub">Minecraft — сервер Vanilla+ на базе мод-пака Homestead</div>
         </div>
 
-        <!-- ШАГ 1: Prism Launcher -->
         <div class="card">
             <div class="step">
                 <div class="step-number">1</div>
@@ -234,7 +233,6 @@
             </div>
         </div>
 
-        <!-- ШАГ 2: Установка Homestead -->
         <div class="card">
             <div class="step">
                 <div class="step-number">2</div>
@@ -269,7 +267,6 @@
             </div>
         </div>
 
-        <!-- ШАГ 3: Подключение к серверу -->
         <div class="card">
             <div class="step">
                 <div class="step-number">3</div>
@@ -301,7 +298,6 @@
             </div>
         </div>
 
-        <!-- Частые вопросы / решение проблем -->
         <div class="card" style="background: rgba(23, 25, 35, 0.6);">
             <h3 style="margin-top: 0; margin-bottom: 25px; display: flex; align-items: center; gap: 10px;">
                 <span style="font-size: 1.5em;">⚠️</span> Если что-то пошло не так
@@ -311,7 +307,7 @@
                 <div>
                     <h4 style="margin-bottom: 15px; color: #fca5a5;">❌ Не подключается к серверу</h4>
                     <ul style="margin: 0; padding-left: 20px; color: #cbd5e1;">
-                        <li>Проверьте версию — нужна <strong>1.20.1</strong> (Forge)</li>
+                        <li>Проверьте версию — нужна <strong>1.20.1</strong> (Fabric)</li>
                         <li>Убедитесь, что Homestead версии 1.2.9.4</li>
                         <li>Отключите брандмауэр/антивирус на 5 минут</li>
                         <li>Попробуйте перезапустить Prism</li>
@@ -336,8 +332,5 @@
         <div class="footer">
             Vostok357 Network · Сервер работает на 1.20.1 · Homestead 1.2.9.4
         </div>
-
-    
-
 </body>
 </html>
