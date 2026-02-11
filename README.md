@@ -241,7 +241,6 @@
                             <li>В поиске введите: <code style="background: #0f172a; padding: 3px 8px; border-radius: 6px;">Homestead</code></li>
                             <li>Выберите версию <strong>1.2.9.4</strong> <span class="modrinth-badge">Modrinth</span></li>
                             <li>Нажмите «OK» — сборка скачается и установится автоматически</li>
-                            <li>Версия Minecraft: <strong>1.20.1</strong>, Fabric</li>
                         </ol>
                     </div>
                     
