@@ -454,7 +454,11 @@
             
                 <!-- ТОЛЬКО ВИДЕО, НИЧЕГО ЛИШНЕГО -->
                 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; background: #000;">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/y3168YzaoT0?si=3s6X5RKpnpurMH6r&amp;controls=0" title="Супер-пупер гайд" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                            src="https://www.youtube.com/embed/jHe7UVZEtIk?si=vVWMvM2hufLJfXCl" 
+                            frameborder="0" 
+                            allowfullscreen>
+                    </iframe>
                 </div>
             </div>
 
